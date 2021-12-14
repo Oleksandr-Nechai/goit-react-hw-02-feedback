@@ -13,11 +13,10 @@ class App extends Component {
   };
   buttonsOption = ['good', 'neutral', 'bad'];
 
-  onClickButton = e => {
-    const currentBtnValue = e.currentTarget.value;
+  onClickButton = button => {
     this.setState(state => ({
       ...state,
-      [currentBtnValue]: state[currentBtnValue] + 1,
+      [button]: state[button] + 1,
     }));
   };
 
